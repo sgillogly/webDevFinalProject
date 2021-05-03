@@ -5,12 +5,6 @@ function connect(){
     $usernameDB2 = $cleardb_url['user'];
     $password2 = $cleardb_url['pass'];
     return (new PDO($dsn2, $usernameDB2, $password2));
-
-
-    // $dsn = 'mysql:host=localhost;dbname=cs_350';
-    // $usernameDB = 'student';
-    // $password = 'CS350';
-    // return (new PDO($dsn, $usernameDB, $password));
 }
 
 function add_new_user($user, $pass){
