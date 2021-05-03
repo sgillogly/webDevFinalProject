@@ -1,9 +1,16 @@
 <?php
 function connect(){
-    $dsn = 'mysql:host=localhost;dbname=cs_350';
-    $usernameDB = 'student';
-    $password = 'CS350';
-    return (new PDO($dsn, $usernameDB, $password));
+    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    $dsn2 = "mysql:host={$cleardb_url['host']};dbname=heroku_691d02bcf049346";
+    $usernameDB2 = $cleardb_url['user'];
+    $password2 = $cleardb_url['pass'];
+    return (new PDO($dsn2, $usernameDB2, $password2));
+
+
+    // $dsn = 'mysql:host=localhost;dbname=cs_350';
+    // $usernameDB = 'student';
+    // $password = 'CS350';
+    // return (new PDO($dsn, $usernameDB, $password));
 }
 
 function add_new_user($user, $pass){
