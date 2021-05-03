@@ -1,0 +1,23 @@
+body{
+    background-color: #D7CEC7;
+}
+a{
+    color: #858585;
+}
+td{
+    color: #c08e60;
+}
+table, th, td{
+    padding: 15px; 
+}
+p{
+    color: #565656;
+}
+h1, h2{
+    color: #76323f;
+}
+div{
+    border: solid black 3px;
+    border-radius: 30px;
+    padding: 15px;
+}
